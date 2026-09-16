@@ -3,6 +3,9 @@
 import Image from "next/image";
 import { useEffect, useState, type FormEvent } from "react";
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+const asset = (path: string) => `${basePath}${path}`;
+
 const stages = [
   { number: "01", name: "IDEIA", eyebrow: "Leitura do desafio", title: "A pergunta certa antes de qualquer resposta.", text: "Entendemos o contexto do negócio, a operação, as restrições e a oportunidade que precisa ganhar forma." },
   { number: "02", name: "DESENVOLVIMENTO", eyebrow: "Construção técnica", title: "Hipóteses testadas com método e viabilidade.", text: "Apoiamos pesquisa, testes, padronização e melhoria de produtos para reduzir incertezas e acelerar decisões." },
@@ -80,7 +83,7 @@ export function ItamiExperience() {
 
       <header className={`site-header ${headerCompact ? "is-compact" : ""}`}>
         <a className="brand" href="#inicio" aria-label="Itami Food Consulting — início">
-          <Image src="/assets/logo-itami-light.png" alt="Itami Food Consulting" width={180} height={71} priority />
+          <Image src={asset("/assets/logo-itami-light.png")} alt="Itami Food Consulting" width={180} height={71} priority />
         </a>
         <nav aria-label="Navegação principal">
           <a href="#atuacao">Atuação</a>
@@ -93,7 +96,7 @@ export function ItamiExperience() {
         <section className="hero" id="inicio">
           <div className="hero-grid" aria-hidden="true" />
           <div className="hero-photo" aria-hidden="true">
-            <Image src="/assets/sara-hero.webp" alt="" fill sizes="(max-width: 900px) 100vw, 50vw" priority />
+            <Image src={asset("/assets/sara-hero.webp")} alt="" fill sizes="(max-width: 900px) 100vw, 50vw" priority />
           </div>
           <div className="hero-copy">
             <div className="hero-overline"><span>Consultoria B2B</span><span>Indústria de alimentos</span><span>Brasil</span></div>
@@ -189,7 +192,7 @@ export function ItamiExperience() {
 
         <section className="sara" id="sara">
           <div className="sara-portrait">
-            <Image src="/assets/sara-profile.webp" alt="Sara Itami em retrato profissional" fill sizes="(max-width: 900px) 100vw, 54vw" />
+            <Image src={asset("/assets/sara-profile.webp")} alt="Sara Itami em retrato profissional" fill sizes="(max-width: 900px) 100vw, 54vw" />
             <span className="portrait-caption">Fundadora / Consultora técnica</span>
           </div>
           <div className="sara-copy">
@@ -199,7 +202,7 @@ export function ItamiExperience() {
             <p>Sara possui experiência em Qualidade e Pesquisa &amp; Desenvolvimento na indústria de alimentos e está em especialização ligada à produção de carne bovina.</p>
             <ul aria-label="Áreas de atuação de Sara Itami"><li>Nutrição</li><li>Qualidade</li><li>Pesquisa &amp; Desenvolvimento</li><li>Indústria de Alimentos</li></ul>
             <figure>
-              <div className="sara-speaking"><Image src="/assets/sara-palestra.webp" alt="Sara Itami durante uma palestra sobre política da qualidade" fill sizes="240px" /></div>
+              <div className="sara-speaking"><Image src={asset("/assets/sara-palestra.webp")} alt="Sara Itami durante uma palestra sobre política da qualidade" fill sizes="240px" /></div>
               <figcaption>Experiência que combina conhecimento técnico, comunicação e implementação.</figcaption>
             </figure>
           </div>
@@ -230,7 +233,7 @@ export function ItamiExperience() {
         </section>
       </div>
 
-      <footer><Image src="/assets/logo-itami-light.png" alt="Itami Food Consulting" width={140} height={55} /><p>© 2026 Itami Food Consulting</p><a href="#inicio">Voltar ao topo ↑</a></footer>
+      <footer><Image src={asset("/assets/logo-itami-light.png")} alt="Itami Food Consulting" width={140} height={55} /><p>© 2026 Itami Food Consulting</p><a href="#inicio">Voltar ao topo ↑</a></footer>
     </main>
   );
 }
