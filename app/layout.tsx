@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     default: "Itami Food Consulting | Consultoria para a indústria de alimentos",
     template: "%s | Itami Food Consulting",
   },
-  description: "Consultoria B2B em qualidade, segurança dos alimentos, pesquisa e desenvolvimento, rotulagem e documentação técnica.",
+  description: "Desenvolvimento de produtos, qualidade e apoio técnico para empresas de alimentos. Conheça a Itami Food Consulting e converse com Sara Itami.",
   keywords: ["consultoria alimentos", "qualidade de alimentos", "P&D alimentos", "rotulagem", "segurança dos alimentos"],
   alternates: { canonical: "/" },
   openGraph: {
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-  themeColor: "#0b0d0e",
+  themeColor: "#171614",
 };
 
 const structuredData = {
